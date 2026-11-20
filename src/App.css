@@ -124,3 +124,11 @@ secondary-button:hover {
   margin-bottom: 10px;
   font-weight: bold;
 }
+
+.sad-cat {
+  width: 1000px;
+  height: auto;
+  display: block;
+  margin: 24px auto;
+  object-fit: contain;
+}

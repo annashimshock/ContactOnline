@@ -64,6 +64,29 @@ function App() {
     )
   }
 
+  if(screen === "play") {
+    return (
+      <main className="homepage">
+        <div className="home-content">
+          <header className="home-header">
+            <div className="logo">contact</div>
+            <button className="secondary-button" onClick={() => setScreen("home")}>
+              Back
+            </button>
+          </header>
+
+          <section className="hero">
+            <img
+              src="/images/sadcat.jpg"
+              alt="sadcat"
+              className="sad-cat"
+              />
+          </section>
+        </div>
+      </main>
+    )
+  }
+
   return (
     <main className="home-page">
       <div className="home-content">
@@ -76,7 +99,12 @@ function App() {
           <p>A little word game. A lot of chaos.</p>
           
           <div className="button-group">
-            <button className="play-button">Play</button>
+            <button 
+              className="play-button"
+              onClick={() => setScreen("play")}
+            >
+              Play
+            </button>
           </div>
           
           <div className="button-group">

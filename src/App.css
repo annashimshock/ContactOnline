@@ -125,10 +125,80 @@ secondary-button:hover {
   font-weight: bold;
 }
 
+/* cat */
+
 .sad-cat {
   width: 1000px;
   height: auto;
   display: block;
   margin: 24px auto;
   object-fit: contain;
+}
+
+
+
+/* tutorial */
+
+.tutorial-page {
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.tutorial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tutorial-progress {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.tutorial-content {
+  width: min(700px, 100%);
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.tutorial-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+}
+
+.tutorial-content > p {
+    color: var(--text-secondary);
+}
+
+.tutorial-arena {
+    position: relative;
+    height: 360px;
+    margin: 40px 0 24px;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 24px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tutorial-letter {
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.tutorial-instructions h2 {
+    margin-bottom: 10px;
+}
+
+.tutorial-instructions p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.tutorial-next-button {
+    margin-top: 24px;
 }

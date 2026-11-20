@@ -1,138 +1,50 @@
 import { useState } from 'react'
 import './App.css'
 
+import CreateRoomPage from './pages/CreateRoomPage'
+import HomePage from './pages/HomePage'
+import TutorialPage from './pages/TutorialPage'
+import JoinRoomPage from './pages/JoinRoomPage'
+import GamePage from './pages/GamePage'
+
 function App() {
   const [screen, setScreen] = useState('home');
 
+
+  // Create Room Page
   if(screen === "create-room") {
-    return (
-      <main className="homepage">
-        <div className="home-content">
-          <header className="home-header">
-            <div className="logo">contact</div>
-            <button className="secondary-button" onClick={() => setScreen("home")}>
-              Back
-            </button>
-          </header>
-
-          <section className="hero">
-            <h1>Create a room</h1>
-            <p>Set things up before the chaos begins.</p>
-          </section>
-        </div>
-      </main>
-    )
+    return <CreateRoomPage onBack={() => setScreen('home')}/>
   }
-
+  
+  // Join Room Page
   if(screen === "join-room") {
-    return (
-      <main className="homepage">
-        <div className="home-content">
-          <header className="home-header">
-            <div className="logo">contact</div>
-            <button className="secondary-button" onClick={() => setScreen("home")}>
-              Back
-            </button>
-          </header>
-
-          <section className="hero">
-            <h1>Join the chaos</h1>
-            <p>Select a room or enter a code.</p>
-          </section>
-        </div>
-      </main>
-    )
+    return <JoinRoomPage onBack={() => setScreen('home')}/>
   }
 
-  if(screen === "tutorial") {
-    return (
-      <main className="homepage">
-        <div className="home-content">
-          <header className="home-header">
-            <div className="logo">contact</div>
-            <button className="secondary-button" onClick={() => setScreen("home")}>
-              Back
-            </button>
-          </header>
 
-          <section className="hero">
-            <h1>Never played contact?</h1>
-            <p>That's okay, we'll show you how.</p>
-          </section>
-        </div>
-      </main>
-    )
+
+
+  // Tutorial Start Page
+  if(screen === "tutorial-home") {
+    return <TutorialPage onBack={() => setScreen('home')}/>
   }
 
+
+  // WIP
   if(screen === "play") {
-    return (
-      <main className="homepage">
-        <div className="home-content">
-          <header className="home-header">
-            <div className="logo">contact</div>
-            <button className="secondary-button" onClick={() => setScreen("home")}>
-              Back
-            </button>
-          </header>
-
-          <section className="hero">
-            <img
-              src="/images/sadcat.jpg"
-              alt="sadcat"
-              className="sad-cat"
-              />
-          </section>
-        </div>
-      </main>
-    )
+    return <GamePage onBack={() => setScreen('home')}/>
   }
 
-  return (
-    <main className="home-page">
-      <div className="home-content">
-        <header className="home-header">
-          <div className="logo">contact</div>
-        </header>
 
-        <section className="hero">
-          <h1>Let's make<br />contact.</h1>
-          <p>A little word game. A lot of chaos.</p>
-          
-          <div className="button-group">
-            <button 
-              className="play-button"
-              onClick={() => setScreen("play")}
-            >
-              Play
-            </button>
-          </div>
-          
-          <div className="button-group">
-            <button 
-              className="secondary-button"
-              onClick={() => setScreen("create-room")}
-              >
-                Create Room
-              </button>
 
-            <button 
-              className="secondary-button"
-              onClick={() => setScreen("join-room")}
-              >
-                Join Room
-              </button>
 
-            <button 
-              className="secondary-button"
-              onClick={() => setScreen("tutorial")}
-              >
-                Tutorial
-              </button>
-          </div>
-        </section>
-      </div>
-    </main>
-  )
+  // Home page
+  return <HomePage 
+    onPlay={() => setScreen('play')}
+    onCreateRoom={() => setScreen('create-room')}
+    onJoinRoom={() => setScreen('join-room')}
+    onTutorial={() => setScreen('tutorial-home')}
+    />
 }
 
 export default App

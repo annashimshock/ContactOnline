@@ -174,7 +174,7 @@ secondary-button:hover {
     position: relative;
     height: 360px;
     margin: 40px 0 24px;
-    background: white;
+    background: var(--color-primary);
     border: 2px solid var(--border-color);
     border-radius: 24px;
     overflow: hidden;
@@ -187,7 +187,7 @@ secondary-button:hover {
 .tutorial-letter {
     font-size: 6rem;
     font-weight: 800;
-    color: var(--text-primary);
+    color: white;
 }
 
 .tutorial-instructions h2 {
@@ -195,10 +195,14 @@ secondary-button:hover {
 }
 
 .tutorial-instructions p {
-    color: var(--text-secondary);
+    color: var(--color-text);
     line-height: 1.6;
 }
 
 .tutorial-next-button {
-    margin-top: 24px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 20px;
+  padding: 20px 60px;
+  box-shadow: 0 6px 0 var(--color-primary-shadow);
 }

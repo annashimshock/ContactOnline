@@ -24,6 +24,46 @@ function App() {
     )
   }
 
+  if(screen === "join-room") {
+    return (
+      <main className="homepage">
+        <div className="home-content">
+          <header className="home-header">
+            <div className="logo">contact</div>
+            <button className="secondary-button" onClick={() => setScreen("home")}>
+              Back
+            </button>
+          </header>
+
+          <section className="hero">
+            <h1>Join the chaos</h1>
+            <p>Select a room or enter a code.</p>
+          </section>
+        </div>
+      </main>
+    )
+  }
+
+  if(screen === "tutorial") {
+    return (
+      <main className="homepage">
+        <div className="home-content">
+          <header className="home-header">
+            <div className="logo">contact</div>
+            <button className="secondary-button" onClick={() => setScreen("home")}>
+              Back
+            </button>
+          </header>
+
+          <section className="hero">
+            <h1>Never played contact?</h1>
+            <p>That's okay, we'll show you how.</p>
+          </section>
+        </div>
+      </main>
+    )
+  }
+
   return (
     <main className="home-page">
       <div className="home-content">
@@ -47,9 +87,19 @@ function App() {
                 Create Room
               </button>
 
-            <button className="secondary-button">Join Room</button>
+            <button 
+              className="secondary-button"
+              onClick={() => setScreen("join-room")}
+              >
+                Join Room
+              </button>
 
-            <button className="secondary-button">Tutorial</button>
+            <button 
+              className="secondary-button"
+              onClick={() => setScreen("tutorial")}
+              >
+                Tutorial
+              </button>
           </div>
         </section>
       </div>

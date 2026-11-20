@@ -11,9 +11,8 @@
 
 .home-page {
   min-height: 100vh;
-  background: var(--color-background);
-  color: var(--color-text);
-  font-family: "Trecbuchet MS", sans-serif;
+  background: transparent;
+  color: inherit;
 }
 
 .home-content {

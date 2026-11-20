@@ -1,0 +1,127 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  --color-primary: #F4A261;
+  --color-primary-hover: #E99550;
+  --color-primary-shadow: #D58547;
+  --color-background: #FAF8F3;
+  --color-text: #343047;
+  --color-neutral: #E7E1D8;
+}
+
+.home-page {
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: "Trecbuchet MS", sans-serif;
+}
+
+.home-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--color-text);
+  opacity: 0.65;
+}
+
+button {
+  border: none;
+  border-radius: 16px;
+  padding: 16px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+.play-button {
+  background: var(--color-primary);
+  color: white;
+  font-size: 20px;
+  padding: 20px 60px;
+  box-shadow: 0 6px 0 var(--color-primary-shadow);
+}
+
+.secondary-button {
+  background: white;
+  color: var(--color-text);
+  box-shadow: 0 3px 10px #00000010;
+}
+
+secondary-button:hover {
+  background: var(--color-neutral);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* Room Configuration Screen */
+
+.room-settings {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.room-settings h2 {
+  font-size: 24 px;
+  margin-bottom: 12px;
+}
+
+.room-settings input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--color-neutral);
+  border-radius: 14px;
+  background: white;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+.room-settings input:focus {
+  outline: 2px solid var(--color-primary);
+  border-color: transparent;
+}
+
+.setting-group {
+  margin-bottom: 24px;
+}
+
+.setting-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
